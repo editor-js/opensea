@@ -1,6 +1,6 @@
 {
   "name": "@editorjs/opensea",
-  "description": "Opensea Tool for Editor.js",
+  "description": "OpenSea Tool for Editor.js",
   "version": "1.0.0",
   "main": "dist/OpenseaTool.umd.js",
   "module": "dist/OpenseaTool.mjs",

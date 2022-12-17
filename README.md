@@ -1,6 +1,6 @@
 # Opensea Tool for Editor.js
 
-Parses the pasted link to Opensea item and insert the embed block.
+Parses the pasted link to OpenSea item and insert the embed block.
 
 ![Opensea Tool example card](./assets/demo.png)
 
