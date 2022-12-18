@@ -1,4 +1,4 @@
-# Opensea Tool for Editor.js
+# OpenSea Tool for Editor.js
 
 Parses the pasted link to OpenSea item and inserts the embed block.
 
