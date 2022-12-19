@@ -41,11 +41,6 @@ export default class OpenseaTool implements BlockTool {
   private nodes: {[key: string]: HTMLElement|null};
 
   /**
-   * Script URL for an embeddable NFT card
-   */
-  private readonly scriptUrl: string = 'https://unpkg.com/embeddable-nfts/dist/nft-card.min.js';
-
-  /**
    * Class constructor
    */
   constructor({ data, config, api, readOnly }: { data: OpenseaToolData, config: OpenseaToolConfig, api: API, readOnly: boolean }) {
@@ -64,6 +59,30 @@ export default class OpenseaTool implements BlockTool {
   }
 
   /**
+   * Before usage of the Tool, it should be prepared
+   */
+  static prepare(): void {
+    /**
+     * Script URL for an embeddable NFT card
+     * Required only in this method
+     */
+    const scriptUrl = 'https://unpkg.com/embeddable-nfts/dist/nft-card.min.js';
+
+    /**
+     * Add script file only once
+     */
+    const scriptElement = document.querySelector(`script[src="${scriptUrl}"]`);
+
+    if (!scriptElement) {
+      const script = document.createElement('script');
+
+      script.src = scriptUrl;
+
+      document.head.appendChild(script);
+    }
+  }
+
+  /**
    * Creates UI of a Block
    */
   render(): HTMLElement {
@@ -75,19 +94,6 @@ export default class OpenseaTool implements BlockTool {
      */ 
     if (this.data.contractAddress && this.data.tokenId) {
       this.renderNftCard();
-    }
-
-    /**
-     * Add script file only once
-     */
-    const scriptElement = document.querySelector(`script[src="${this.scriptUrl}"]`);
-
-    if (!scriptElement) {
-      const script = document.createElement('script');
-
-      script.src = this.scriptUrl;
-
-      document.head.appendChild(script);
     }
 
     return this.nodes.wrapper;
