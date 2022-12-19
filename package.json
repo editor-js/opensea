@@ -1,13 +1,13 @@
 {
   "name": "@editorjs/opensea",
   "description": "OpenSea Tool for Editor.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/OpenseaTool.umd.js",
   "module": "dist/OpenseaTool.mjs",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/editor-js/opensea.git"
+    "url": "https://github.com/editor-js/opensea.git"
   },
   "scripts": {
     "dev": "vite",
