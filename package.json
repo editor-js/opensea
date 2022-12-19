@@ -1,0 +1,21 @@
+{
+  "name": "@editorjs/opensea",
+  "description": "OpenSea Tool for Editor.js",
+  "version": "1.0.0-rc.0",
+  "main": "dist/OpenseaTool.umd.js",
+  "module": "dist/OpenseaTool.mjs",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@codexteam/icons": "^0.1.0",
+    "@editorjs/editorjs": "^2.26.0",
+    "@types/node": "^16.3.3",
+    "ts-loader": "^9.1.0",
+    "typescript": "^4.2.4",
+    "vite": "^3.1.0",
+    "vite-plugin-css-injected-by-js": "^2.1.1"
+  }
+}
