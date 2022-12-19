@@ -2,7 +2,7 @@
 
 Parses the pasted link to OpenSea item and inserts the embed block.
 
-![Opensea Tool example card](./assets/demo.png)
+![Opensea Tool example card](assets/demo.png)
 
 ## Installation
 
